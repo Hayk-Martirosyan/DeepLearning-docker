@@ -55,9 +55,8 @@ RUN cd /usr/local/src/opencv && mkdir build && cd build && \
 #
 # Tensorflow 1.8.0 - CPU
 #
-
-ADD tensorflow-1.6.0-cp35-cp35m-linux_x86_64.whl /tensorflow-1.6.0-cp35-cp35m-linux_x86_64.whl
-RUN pip3 install --no-cache-dir  --upgrade /tensorflow-1.6.0-cp35-cp35m-linux_x86_64.whl
+ADD tensorflow-1.12.0-cp35-cp35m-linux_x86_64.whl /tensorflow-1.12.0-cp35-cp35m-linux_x86_64.whl
+RUN pip3 install --no-cache-dir  --upgrade /tensorflow-1.12.0-cp35-cp35m-linux_x86_64.whl
 
 # Expose port for TensorBoard
 EXPOSE 6006
@@ -75,4 +74,4 @@ RUN pip3 install --no-cache-dir --upgrade h5py pydot_ng keras
 RUN pip3 install Flask
 ENV PYTHONPATH /pl
 
-WORKDIR /ml/fb
+WORKDIR /ml
